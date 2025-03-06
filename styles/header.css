@@ -1,0 +1,22 @@
+header {
+  & .logo {
+    margin-block: 2.4rem 6.4rem;
+    text-align: center;
+  }
+
+  & .header-content {
+    & p {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      color: var(--color-brand);
+      font: var(--link);
+    }
+
+    & h1 {
+      font: var(--title);
+      color: var(--content-primary);
+    }
+  }
+}
