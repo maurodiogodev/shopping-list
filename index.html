@@ -26,41 +26,52 @@
         </div>
     </header>
 
-    <form class="container">
-        <fieldset>
-            <input type="text" name="item" id="item" placeholder="Adicione um novo item">
-            <button>Adicionar item</button>
-        </fieldset>
-    </form>
-
     <main class="container">
+
+        <form>
+            <fieldset>
+                <input type="text" name="item" id="item" placeholder="Adicione um novo item">
+                <button>Adicionar item</button>
+            </fieldset>
+        </form>
+
         <ul role="list">
             <li>
-                <input type="checkbox" name="check" id="check">
-                <span>Yogurt natural</span>
+                <div>
+                    <input type="checkbox" name="check" id="check">
+                    <span>Yogurt natural</span>
+                </div>
                 <img src="./assets/icons/trash-can.svg" alt="ícone de deletar">
             </li>
             <li>
-                <input type="checkbox" name="check" id="check">
-                <span>Sereal de milho</span>
+                <div>
+                    <input type="checkbox" name="check" id="check">
+                    <span>Uvas</span>
+                </div>
                 <img src="./assets/icons/trash-can.svg" alt="ícone de deletar">
             </li>
             <li>
-                <input type="checkbox" name="check" id="check">
-                <span>Uvas</span>
+                <div>
+                    <input type="checkbox" name="check" id="check">
+                    <span>Flocos de milho</span>
+                </div>
                 <img src="./assets/icons/trash-can.svg" alt="ícone de deletar">
             </li>
             <li>
-                <input type="checkbox" name="check" id="check">
-                <span>Chocolate</span>
+                <div>
+                    <input type="checkbox" name="check" id="check">
+                    <span>Chocolate</span>
+                </div>
                 <img src="./assets/icons/trash-can.svg" alt="ícone de deletar">
             </li>
         </ul>
 
         <div>
             <p>
-                <img src="./assets/icons/warning-circle.svg">
-                <span>O item foi removido da lista</span>
+                <span>
+                    <img src="./assets/icons/warning-circle.svg">
+                    <span>O item foi removido da lista</span>
+                </span>
                 <img src="./assets/icons/delete.svg">
             </p>
         </div>
