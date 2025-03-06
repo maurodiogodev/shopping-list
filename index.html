@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+
+    <link rel="stylesheet" href="./styles/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="container">
+        <div class="logo desktop-only">
+            <img src="./assets/logo.svg" alt="logomarca da Quicklist">
+        </div>
+
+        <div class="header-content">
+            <p> <img src="./assets/icons/left-arrow.svg"> Voltar </p>
+            <h1>Compras da semana</h1>
+        </div>
+    </header>
+
+    <form class="container">
+        <fieldset>
+            <input type="text" name="item" id="item" placeholder="Adicione um novo item">
+            <button>Adicionar</button>
+        </fieldset>
+    </form>
+
+    <main class="container">
+        <ul role="list">
+            <li>
+                <input type="checkbox" name="check" id="check">
+                <span>Yogurt natural</span>
+                <img src="./assets/icons/trash-can.svg" alt="ícone de deletar">
+            </li>
+            <li>
+                <input type="checkbox" name="check" id="check">
+                <span>Sereal de milho</span>
+                <img src="./assets/icons/trash-can.svg" alt="ícone de deletar">
+            </li>
+            <li>
+                <input type="checkbox" name="check" id="check">
+                <span>Uvas</span>
+                <img src="./assets/icons/trash-can.svg" alt="ícone de deletar">
+            </li>
+            <li>
+                <input type="checkbox" name="check" id="check">
+                <span>Chocolate</span>
+                <img src="./assets/icons/trash-can.svg" alt="ícone de deletar">
+            </li>
+        </ul>
+
+        <div>
+            <p>
+                <img src="./assets/icons/warning-circle.svg">
+                <span>O item foi removido da lista</span>
+                <img src="./assets/icons/delete.svg">
+            </p>
+        </div>
+    </main>
+
+</body>
+
+</html>
