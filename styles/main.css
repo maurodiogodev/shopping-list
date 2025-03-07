@@ -59,20 +59,76 @@ ul {
 
   & li {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     border-radius: 1.2rem;
     background-color: var(--always-white);
     padding: 1.2rem;
+
+    & > div {
+      flex-grow: 1;
+
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      & [type="checkbox"] {
+        position: absolute;
+        inset: 0;
+      }
+
+      & .checkbox-image {
+        background: url(../assets/icons/checkbox-default.svg) no-repeat;
+
+        position: relative;
+        top: 4px;
+
+        flex: 0 0 2.4rem;
+        height: 2.4rem;
+      }
+
+      &:focus-within,
+      &:hover {
+        .checkbox-image {
+          background: url(../assets/icons/checkbox-hover.svg) no-repeat;
+        }
+      }
+
+      &:has(:checked) {
+        .checkbox-image {
+          background: url(../assets/icons/checkbox-selected.svg) no-repeat;
+        }
+      }
+    }
+
+    & #delete-item {
+      cursor: pointer;
+    }
+
+    & #delete-item:hover path {
+      stroke: var(--color-danger);
+    }
   }
 }
 
 main > div {
-  p {
-    background-color: var(--color-danger);
+  margin-bottom: 4rem;
+
+  & p {
     border-radius: 1.2rem;
     padding: 1.2rem;
+    background-color: var(--color-danger);
+    color: var(--always-white);
+    font: var(--label);
+
+    display: flex;
+    justify-content: space-between;
+
+    & span {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
   }
 }
 
