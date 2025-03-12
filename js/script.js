@@ -48,6 +48,17 @@ itemsList.addEventListener('click', event => {
     }
 })
 
+/*
+allRemoveItemButton.forEach(removeItemButton => {
+
+    removeItemButton.addEventListener('click', () => {
+        const itemToRemove = removeItemButton.closest("li")
+
+        removeItem(itemToRemove)
+    })
+})
+*/
+
 function removeItem(itemToRemove) {
     itemsList.removeChild(itemToRemove)
 
