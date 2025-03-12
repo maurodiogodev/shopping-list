@@ -124,12 +124,12 @@ ul {
       }
     }
 
-    & #delete-item {
+    & #removeItemButton {
       cursor: pointer;
       border-radius: 1.2rem;
     }
 
-    & #delete-item:hover {
+    & #removeItemButton:hover {
       background-color: var(--color-danger-alpha);
 
       & path {
