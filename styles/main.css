@@ -12,30 +12,53 @@ form {
 
     margin-block: 4.4rem 4rem;
 
-    & input[name="item"] {
+    &>div {
       flex-grow: 1;
 
-      border: none;
-      border-radius: 1.2rem;
-      outline: 2px solid var(--border-primary);
+      display: flex;
+      flex-direction: column;
 
-      padding: 1.2rem 1.6rem;
-      background-color: var(--background-secondary);
+      & p {
+        display: none;
+        align-items: center;
+        gap: .4rem;
 
-      &:hover,
-      &:focus-within {
-        outline-color: var(--border-hover);
+        margin-block: .4rem;
+        color: var(--color-danger);
+        font: var(--alert-label);
+
+        &.show-validation-alert {
+          display: flex;
+        }
       }
 
-      &:focus-within {
-        outline-color: var(--color-brand);
+      & input[name="item"] {
+
+        border: none;
+        border-radius: 1.2rem;
+        outline: 2px solid var(--border-primary);
+
+        padding: 1.2rem 1.6rem;
+        background-color: var(--background-secondary);
+
+        &:hover,
+        &:focus-within {
+          outline-color: var(--border-hover);
+        }
+
+        &:focus-within {
+          outline-color: var(--color-brand);
+        }
       }
+
     }
 
     & button {
+      height: fit-content;
       padding: 1.2rem 2.4rem;
       border-radius: 1.2rem;
       background-color: var(--color-brand);
+
       color: var(--always-white);
       font: var(--label);
       cursor: pointer;
@@ -65,7 +88,7 @@ ul {
     background-color: var(--always-white);
     padding: 1.2rem;
 
-    & > div {
+    &>div {
       flex-grow: 1;
 
       position: relative;
@@ -103,15 +126,20 @@ ul {
 
     & #delete-item {
       cursor: pointer;
+      border-radius: 1.2rem;
     }
 
-    & #delete-item:hover path {
-      stroke: var(--color-danger);
+    & #delete-item:hover {
+      background-color: var(--color-danger-alpha);
+
+      & path {
+        stroke: var(--content-primary-alpha);
+      }
     }
   }
 }
 
-main > div {
+main>div {
   margin-bottom: 4rem;
 
   & p {
@@ -121,18 +149,22 @@ main > div {
     color: var(--always-white);
     font: var(--label);
 
-    display: flex;
+    display: none;
     justify-content: space-between;
 
-    & span {
+    &.show-removed-item-alert {
       display: flex;
-      align-items: center;
-      gap: 0.8rem;
+
+      & span {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
     }
   }
 }
 
-@media (width <= 510px) {
+@media (width <=510px) {
   fieldset {
     flex-direction: column;
 
